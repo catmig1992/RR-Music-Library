@@ -1,11 +1,34 @@
 import GalleryItem from "./GalleryItem";
 
-function Gallery(props: any) {
-  const display = props.data.map((item: any, index: any) => {
-    return <GalleryItem item={item} key={index} />;
-  });
+interface GalleryProps {
+  data: {
+    trackName: string;
+    collectionName: string;
+    primaryGenreName: string;
+    releaseDate: string;
+    artworkUrl100: string;
+  }[];
+}
+
+function Gallery(props: GalleryProps) {
+  const display = props.data.map(
+    (
+      item: {
+        trackName: string;
+        collectionName: string;
+        primaryGenreName: string;
+        releaseDate: string;
+        artworkUrl100: string;
+      },
+      index: any
+    ) => {
+      return <GalleryItem item={item} key={index} />;
+    }
+  );
 
   return <div>{display}</div>;
 }
 
 export default Gallery;
+
+
