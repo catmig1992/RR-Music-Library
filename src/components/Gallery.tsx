@@ -5,7 +5,7 @@ interface GalleryProps {
 }
 
 function Gallery(props: GalleryProps) {
-  const display = props.data.map((item: ItemProps, index: any) => {
+  const display = props.data.map((item: ItemProps, index: number) => {
     return <GalleryItem item={item} key={index} />;
   });
 
