@@ -1,13 +1,5 @@
 import { useState } from "react";
 
-interface ItemProps {
-  trackName: string;
-  collectionName: string;
-  primaryGenreName: string;
-  releaseDate: string;
-  artworkUrl100: string;
-}
-
 interface GalleryItemProps {
   item: ItemProps;
 }
